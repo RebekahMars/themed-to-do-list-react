@@ -1,7 +1,7 @@
 
 const ToDo = ({item}) => {
     return (
-        <div className="task-to-do">
+        <div className={item.completed ? "crossed" : ""}>
             {item.task}
         </div>
     );

@@ -2,20 +2,16 @@ import "../css/Modal.css"
 import {useState, useEffect, useImperativeHandle, forwardRef} from "react";
 import {useForm} from "react-hook-form";
 import ToDoList from "./To-Do-List";
-import list from "./list-data"
+import listData from "./list-data";
 
 export const Modal = ({showModal, setShowModal}) => {
 
-    const[userInput, setUserInput] = useState("");
+    const[userInput] = useState("");
 
     const {register, handleSubmit, formState:{errors}} = useForm();
 
     const onSubmit = (userInput) => {
-        let listCopy = [list];
-        //setUserInput(listCopy);
-        // listCopy = [...listCopy, {list-id: list.length + 1, task: userInput, task-complete: false}];
-        console.log(userInput);
-        console.log(listCopy);
+        listData.push({"index": listData.length + 1, task: userInput.taskName, "completed": false});
     }
 
     return (

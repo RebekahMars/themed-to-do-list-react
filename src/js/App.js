@@ -15,12 +15,20 @@ function App() {
   const openModal = () => {
     setShowModal(prev => !prev);
   };
+
+  const toggle = (index) => {
+    let listItems = toDoList.map(item => {
+      return item.index == index ? {...item, completed: !item.completed} : {...item};
+    });
+
+    setToDoList(listItems);
+  }
   // const modal = useRef(null);
   return (
     <>
     <div className="App">
       <Header/>
-      <ToDoList toDoList={toDoList}/>
+      <ToDoList toDoList={toDoList} toggle={toggle}/>
       <button onClick ={openModal}>Click Me</button>
       <Modal showModal={showModal} setShowModal={setShowModal}/>
     </div>

@@ -1,16 +1,20 @@
 export default 
-[{
-            "list-id": 1,
+[    
+        {
+            "index": 1,
             "task": "Train with Obi-Wan",
-            "task-completed": false
-    },
-    {
-            "list-id": 2,
+            "completed": false
+        },
+
+        {
+            "index": 2,
             "task": "Confront Darth Vader",
-            "task-completed": false
-    },
-    {
-            "list-id": 3,
+            "completed": false
+        },
+
+        {
+            "index": 3,
             "task": "Become Jedi Master",
-            "task-completed": false
-}]
+            "completed": false
+        }
+]
