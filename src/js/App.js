@@ -22,6 +22,7 @@ function App() {
     });
 
     setToDoList(listItems);
+    console.log(listItems);
   }
   // const modal = useRef(null);
   return (

@@ -12,6 +12,7 @@ export const Modal = ({showModal, setShowModal}) => {
 
     const onSubmit = (userInput) => {
         listData.push({"index": listData.length + 1, task: userInput.taskName, "completed": false});
+        setShowModal(prev => !prev);
     }
 
     return (

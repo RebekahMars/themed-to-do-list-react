@@ -1,4 +1,4 @@
-
+import "../css/App.css"
 const ToDo = ({item}) => {
     return (
         <div className={item.completed ? "crossed" : ""}>
