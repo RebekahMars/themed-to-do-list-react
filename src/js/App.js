@@ -1,4 +1,4 @@
-import {useState, useRef} from "react";
+import {useState} from "react";
 
 import "../css/App.css";
 import Header from "./Header";
@@ -16,9 +16,9 @@ function App() {
     setShowModal(prev => !prev);
   };
 
-  const toggle = (index) => {
+  const toggleCompleted = (index) => {
     let listItems = toDoList.map(item => {
-      return item.index == index ? {...item, completed: !item.completed} : {...item};
+      return item.index === Number(index) ? {...item, completed: !item.completed} : {...item};
     });
 
     setToDoList(listItems);
@@ -29,8 +29,8 @@ function App() {
     <>
     <div className="App">
       <Header/>
-      <ToDoList toDoList={toDoList} toggle={toggle}/>
-      <button onClick ={openModal}>Click Me</button>
+      <ToDoList toDoList={toDoList} toggleCompleted={toggleCompleted}/>
+      <button onClick ={openModal}>Add Task</button>
       <Modal showModal={showModal} setShowModal={setShowModal}/>
     </div>
   </>

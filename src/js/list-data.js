@@ -15,6 +15,6 @@ export default
         {
             "index": 3,
             "task": "Become Jedi Master",
-            "completed": false
+            "completed": true
         }
 ]

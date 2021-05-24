@@ -1,7 +1,6 @@
 import "../css/Modal.css"
-import {useState, useEffect, useImperativeHandle, forwardRef} from "react";
+import {useState} from "react";
 import {useForm} from "react-hook-form";
-import ToDoList from "./To-Do-List";
 import listData from "./list-data";
 
 export const Modal = ({showModal, setShowModal}) => {

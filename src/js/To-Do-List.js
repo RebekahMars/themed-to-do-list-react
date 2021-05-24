@@ -5,7 +5,9 @@ const ToDoList = ({toDoList}) => {
         <div>
             {toDoList.map(item => {
                 return(
-                    <ToDo item={item} />
+                    <ToDo 
+                    item={item} 
+                    />
                 )
             })}
         </div>
