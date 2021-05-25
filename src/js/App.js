@@ -41,9 +41,11 @@ function App() {
     <div className="toDoApp">
       <Header/>
       <ToDoList toDoList={toDoList}/>
-      <button onClick ={openModal}>Add Task</button>
-      <button onClick={openModifyModal}>Modify Task</button>
-      <button onClick={filterTasks}>Filter Tasks</button>
+      <div>
+        <button onClick ={openModal}>Add Task</button>
+        <button onClick={openModifyModal}>Modify Task</button>
+        <button onClick={filterTasks}>Filter Tasks</button>
+      </div>
       <AddModal showModal={showModal} setShowModal={setShowModal}/>
       <ModifyModal className="modify-modal" showModal={showModifyModal} setShowModal={setModifyModal}/>
     </div>

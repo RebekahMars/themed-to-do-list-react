@@ -22,7 +22,7 @@ export const ModifyModal = ({showModal, setShowModal}) => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h1>Modify Task</h1>
                     <label>Task Name</label>
-                    <input type="text"{...register("taskName", {required: true})}></input>
+                    <input type="text"{...register("taskName", {required: true})}></input> {/*I wanted to have props be sent to this modal with the list.text value */}
                     {errors.taskName &&<p style={{color:"red"}}>This is a required field</p>}
                     <button type="submit">Modify Task</button>
                     <button onClick={() => setShowModal(prev=> !prev)}>Exit</button>
