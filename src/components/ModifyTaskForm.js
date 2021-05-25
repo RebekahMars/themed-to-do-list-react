@@ -3,7 +3,7 @@ import {useState} from "react";
 import {useForm} from "react-hook-form";
 import listData from "./list-data";
 
-export const Modal = ({showModal, setShowModal}) => {
+export const ModifyModal = ({showModal, setShowModal}) => {
 
     const[userInput, setUserInput] = useState("");
 
@@ -20,11 +20,11 @@ export const Modal = ({showModal, setShowModal}) => {
         {showModal ? (
             <div className="modal-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <h1>Add Task</h1>
-                    <label>Task</label>
-                    <input type="text" placeholder="Task Name"{...register("taskName", {required: true})}></input>
+                    <h1>Modify Task</h1>
+                    <label>Task Name</label>
+                    <input type="text"{...register("taskName", {required: true})}></input>
                     {errors.taskName &&<p style={{color:"red"}}>This is a required field</p>}
-                    <button type="submit">Add New Task</button>
+                    <button type="submit">Modify Task</button>
                     <button onClick={() => setShowModal(prev=> !prev)}>Exit</button>
                 </form>
             </div>
@@ -32,4 +32,4 @@ export const Modal = ({showModal, setShowModal}) => {
         </>
     )
 };
-export default Modal;
+export default ModifyModal;

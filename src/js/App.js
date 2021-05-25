@@ -4,25 +4,48 @@ import "../css/App.css";
 import Header from "../components/Header";
 import list from "../components/list-data";
 import ToDoList from "../components/To-Do-List"
-import Modal from "../components/ToDoForm"
+import AddModal from "../components/AddTaskForm"
+import ModifyModal from "../components/ModifyTaskForm"
 
 
 function App() {
 
   const[toDoList, setToDoList] = useState(list);
   const[showModal, setShowModal] = useState(false);
+  const[showModifyModal, setModifyModal] = useState(false);
 
   const openModal = () => {
     setShowModal(prev => !prev);
   };
 
+  const openModifyModal = () => {
+    setModifyModal(prev => !prev);
+  }
+
+  const filterTasks = () => {
+    let filteredCompletedTasks =[...list].filter(task=>task.completed === false);
+
+    for(let i =0; i< list.length; i++)
+    {
+      if(list[i].completed === true)
+      {
+        list.splice(i, 1);
+        i--;
+      }
+    }
+    setToDoList(filteredCompletedTasks);
+  }
+
   return (
     <>
     <div className="toDoApp">
       <Header/>
-      <ToDoList/>
+      <ToDoList toDoList={toDoList}/>
       <button onClick ={openModal}>Add Task</button>
-      <Modal showModal={showModal} setShowModal={setShowModal}/>
+      <button onClick={openModifyModal}>Modify Task</button>
+      <button onClick={filterTasks}>Filter Tasks</button>
+      <AddModal showModal={showModal} setShowModal={setShowModal}/>
+      <ModifyModal className="modify-modal" showModal={showModifyModal} setShowModal={setModifyModal}/>
     </div>
   </>
   );

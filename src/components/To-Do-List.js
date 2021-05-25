@@ -1,6 +1,7 @@
 import list from "./list-data"
 import ToDo from "./ToDo"
 import {useState} from "react";
+import ModifyModal from "./ModifyTaskForm"
 
 const ToDoList = () => {
 
@@ -11,6 +12,7 @@ const ToDoList = () => {
             <ToDo>
                 task={toDoList}
             </ToDo>
+            <ModifyModal></ModifyModal>
         </div>
     )
 }
