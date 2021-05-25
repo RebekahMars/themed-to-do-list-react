@@ -23,7 +23,9 @@ const ToDo = ({task, updateToDo}) => {
     }
 
     const removeTask = index => {
-        let removedTask = [...list].filter(task=> task.index ===index);
+        let removedTask = [...list].filter(task=> task.index == index);
+        console.log(removedTask);
+        console.log(index);
         list.splice(removedTask, 1);
         setToDoList(removedTask);
     }

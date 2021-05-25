@@ -2,6 +2,7 @@ import "../css/Modal.css"
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import listData from "./list-data";
+import image from "./it doesn't work.jpg"
 
 export const ModifyModal = ({showModal, setShowModal}) => {
 
@@ -20,6 +21,7 @@ export const ModifyModal = ({showModal, setShowModal}) => {
         {showModal ? (
             <div className="modal-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
+                    <img className="system-image" src={image}></img>
                     <h1>Modify Task</h1>
                     <label>Task Name</label>
                     <input type="text"{...register("taskName", {required: true})}></input> {/*I wanted to have props be sent to this modal with the list.text value */}
