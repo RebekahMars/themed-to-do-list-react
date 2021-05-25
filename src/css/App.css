@@ -1,3 +1,11 @@
 .crossed {
     text-decoration: line-through;
 }
+.toDoApp {
+    cursor: pointer;
+}
+.toDo
+{
+    display: flex;
+    text-align: center;
+}

@@ -16,22 +16,6 @@ function App() {
     setShowModal(prev => !prev);
   };
 
-  const toggleCompleted = (index) => {
-   /*  let listItems = toDoList.map(item => {
-      return item.index === Number(index) ? {...item, completed: !item.completed} : {...item};
-    }); */
-    console.log("you clicked me");
-    let updatedToDo = toDoList.map(toDo => {
-      if(toDo.index === index) {
-        toDo.completed = !toDo.completed;
-      }
-      return toDo;
-    });
-    setToDoList(updatedToDo);
-    //setToDoList(listItems);
-    //console.log(listItems);
-  }
-  // const modal = useRef(null);
   return (
     <>
     <div className="toDoApp">
