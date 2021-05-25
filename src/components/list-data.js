@@ -2,19 +2,19 @@ export default
 [    
         {
             "index": 1,
-            "task": "Train with Obi-Wan",
+            "taskName": "Train with Obi-Wan",
             "completed": false
         },
 
         {
             "index": 2,
-            "task": "Confront Darth Vader",
+            "taskName": "Confront Darth Vader",
             "completed": false
         },
 
         {
             "index": 3,
-            "task": "Become Jedi Master",
-            "completed": true
+            "taskName": "Become Jedi Master",
+            "completed": false
         }
 ]

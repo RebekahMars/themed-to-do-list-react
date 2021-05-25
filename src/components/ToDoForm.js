@@ -5,12 +5,13 @@ import listData from "./list-data";
 
 export const Modal = ({showModal, setShowModal}) => {
 
-    const[userInput] = useState("");
+    const[userInput, setUserInput] = useState("");
 
     const {register, handleSubmit, formState:{errors}} = useForm();
 
     const onSubmit = (userInput) => {
         listData.push({"index": listData.length + 1, task: userInput.taskName, "completed": false});
+        setUserInput(userInput);
         setShowModal(prev => !prev);
     }
 
